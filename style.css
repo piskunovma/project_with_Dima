@@ -1,0 +1,37 @@
+.margin {
+  margin: 0 auto;
+}
+.container {
+  max-width: 1300px;
+  min-width: 520px;
+  margin: 0 auto;
+}
+.header {
+  height: 433.33333333px;
+  background-color: #999999;
+  margin: 0 auto;
+}
+.main {
+  background-color: #555555;
+  height: 900px;
+}
+.block1 {
+  width: 200px;
+  height: 400px;
+  margin: 50px 30px;
+  outline: 1px solid black;
+}
+.block2 {
+  min-width: 300px;
+  height: 350px;
+  outline: 1px solid black;
+  margin: 50px 30px;
+}
+.footer {
+  background-color: #333333;
+  height: 325px;
+  margin: 0 auto;
+}
+.clr {
+  clear: both;
+}

@@ -1,0 +1,50 @@
+@widthAll: 1300px;
+@colorAll: #999;
+
+.margin {
+    margin: 0 auto;
+}
+
+.container {
+    max-width: @widthAll;
+    min-width: @widthAll / 2.5;
+    .margin
+}
+
+.header {
+    height: @widthAll / 3;
+    background-color:@colorAll - #000;
+    .margin
+}
+
+.main {
+    background-color: @colorAll - #444;
+    height: 900px;
+}
+
+.block1 {
+    width: 200px;
+    height: 400px;
+    margin: 50px 30px;
+    outline: 1px solid black;
+    // float: left;
+}
+
+.block2 {
+    min-width: 300px;
+    height: 350px;
+    outline: 1px solid black;
+    margin: 50px 30px;
+    // float: right;
+}
+
+.footer {
+    background-color: @colorAll - #666;
+    height: @widthAll / 4;
+    .margin;
+}
+
+
+.clr {
+    clear: both;
+}
