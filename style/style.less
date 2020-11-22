@@ -1,4 +1,4 @@
-@widthAll: 1300px;
+@widthAll: 1200px;
 @colorAll: #999;
 
 body {
@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-    height: @widthAll / 3;
+    height: @widthAll / 4;
     background-color:@colorAll - #000;
     .margin;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .block2 {
-    min-width: 900px;
+    min-width: 820px;
     height: 500px;
     outline: 1px solid black;
     margin: 50px 30px;
@@ -55,6 +55,40 @@ body {
     height: 170px;
     background-image: url(../img/logo.jpg);
     outline: 1px solid black;
-    margin: 100px 100px;
-    float: left;
+    // margin: 70px 0 0 70px;
+    // float: left;
+    
 }
+
+.menu {
+    height: 50px;
+    width: 586px;
+    margin: 0 auto;
+}
+
+.menu-list li {
+    width: 90px;
+    height: 20px;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 18px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.menu-list {
+    // float: right;
+    margin-bottom: 0;
+    // text-align: center;
+    padding: 0;
+    margin-top: 0;
+
+}
+// .test {
+//     // display: inline-block;
+// }
+
+// Разобраться почему margin толкается от верхнего блока
+// Разобраться почему не работает центрирование элементов списка

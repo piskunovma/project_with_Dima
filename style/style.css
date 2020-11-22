@@ -6,11 +6,11 @@ body {
   margin: 0 auto;
 }
 .container {
-  width: 1300px;
+  width: 1200px;
   margin: 0 auto;
 }
 .header {
-  height: 433.33333333px;
+  height: 300px;
   background-color: #999999;
   margin: 0 auto;
 }
@@ -26,7 +26,7 @@ body {
   float: left;
 }
 .block2 {
-  min-width: 900px;
+  min-width: 820px;
   height: 500px;
   outline: 1px solid black;
   margin: 50px 30px;
@@ -44,6 +44,25 @@ body {
   height: 170px;
   background-image: url(../img/logo.jpg);
   outline: 1px solid black;
-  margin: 100px 100px;
-  float: left;
+}
+.menu {
+  height: 50px;
+  width: 586px;
+  margin: 0 auto;
+}
+.menu-list li {
+  width: 90px;
+  height: 20px;
+  list-style-type: none;
+  display: inline-block;
+  font-size: 18px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.menu-list {
+  margin-bottom: 0;
+  padding: 0;
+  margin-top: 0;
 }
