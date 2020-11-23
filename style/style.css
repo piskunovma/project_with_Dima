@@ -6,8 +6,13 @@ body {
   margin: 0 auto;
 }
 .container {
-  width: 1200px;
+  width: 2500px;
   margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 .header {
   padding: 0.1px;
@@ -17,22 +22,22 @@ body {
 }
 .logo {
   margin: 70px 0px 0px 70px;
-  width: 170px;
-  height: 170px;
+  width: 120px;
+  height: 120px;
   background-image: url(../img/logo.jpg);
   outline: 1px solid black;
 }
 .menu {
   margin: 0 auto;
+  margin-top: 60px;
 }
 .menu-list li {
-  width: 100px;
-  height: 20px;
+  width: 130px;
   list-style-type: none;
   display: inline-block;
   font-size: 18px;
   box-shadow: 0 1px 5px black;
-  padding: 10px;
+  padding: 5px;
 }
 .menu-list {
   margin-bottom: 0;
@@ -60,11 +65,11 @@ body {
   margin: 0;
 }
 .catalog_block2 {
-  min-width: 850px;
+  max-width: 850px;
   height: 350px;
   outline: 1px solid black;
   margin-right: 29.9px;
-  float: right;
+  margin-left: 310px;
 }
 .catalog-list a {
   text-decoration: none;
@@ -87,8 +92,8 @@ body {
 }
 .catalog_h1 {
   margin: 30px 0 0 30px;
-  display: block;
   padding-left: 30px;
+  display: block;
 }
 .footer {
   background-color: #333333;

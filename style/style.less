@@ -1,6 +1,7 @@
 @widthAll: 1200px;
 @colorAll: #999;
 @paddingForMargin: 0.1px;
+@desktop: 1200px;
 
 body {
     margin: 0px;
@@ -12,9 +13,15 @@ body {
 }
 
 .container {
-    width: @widthAll;
+    width: @widthAll + 1300px;
     .margin
 }
+
+@media (min-width: @desktop) {
+    .container {
+      max-width: @desktop;
+    }
+  }
 
 .header {
     padding: @paddingForMargin;
@@ -25,24 +32,25 @@ body {
 
 .logo {
     margin: 70px 0px 0px 70px;
-    width: 170px;
-    height: 170px;
+    width: 120px;
+    height: 120px;
     background-image: url(../img/logo.jpg);
     outline: 1px solid black;
 }
 
 .menu {
     margin: 0 auto;
+    margin-top: 60px;
 }
 
 .menu-list li {
-    width: 100px;
-    height: 20px;
+    width: 130px;
+    // height: 20px;
     list-style-type: none;
     display: inline-block;
     font-size: 18px;
     box-shadow: 0 1px 5px black;
-    padding: 10px;
+    padding: 5px;
 }
 
 .menu-list {
@@ -77,11 +85,12 @@ body {
 }
 
 .catalog_block2 {
-    min-width: 850px;
+    max-width: 850px;
     height: 350px;
     outline: 1px solid black;
     margin-right: 30 - @paddingForMargin;
-    float: right;
+    // float: right;
+    margin-left: 310px;
 }
 
 .catalog-list a {
@@ -104,12 +113,13 @@ body {
 }
 .catalog_h1 a {
     text-decoration: none;
+    // display: block;
 }
 
 .catalog_h1 {
     margin: 30px 0 0 30px;
-    display: block;
     padding-left: 30px;
+    display: block;
 }
 
 .footer {
@@ -121,3 +131,6 @@ body {
 .clr {
     clear: both;
 }
+
+// Разобраться с двумя блоками в body. Почему один выше другого?
+// Разобраться почему ссылка Каталога h1 на всю ширину контейнера.
