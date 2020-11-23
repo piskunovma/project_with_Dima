@@ -15,33 +15,6 @@ body {
   background-color: #999999;
   margin: 0 auto;
 }
-.main {
-  background-color: #555555;
-  height: 1000px;
-  padding: 0.1px;
-}
-.block1 {
-  width: 250px;
-  height: 600px;
-  outline: 1px solid black;
-  margin: 49.9px 29.9px;
-  float: left;
-}
-.block2 {
-  min-width: 820px;
-  height: 500px;
-  outline: 1px solid black;
-  margin: 49.9px 29.9px;
-  float: right;
-}
-.footer {
-  background-color: #333333;
-  height: 200px;
-  padding: 0.1px;
-}
-.clr {
-  clear: both;
-}
 .logo {
   margin: 70px 0px 0px 70px;
   width: 170px;
@@ -50,23 +23,78 @@ body {
   outline: 1px solid black;
 }
 .menu {
-  height: 50px;
-  width: 650px;
   margin: 0 auto;
 }
 .menu-list li {
-  width: 90px;
+  width: 100px;
   height: 20px;
   list-style-type: none;
   display: inline-block;
   font-size: 18px;
-  border: 2px solid black;
+  box-shadow: 0 1px 5px black;
   padding: 10px;
-  border-radius: 20px;
 }
 .menu-list {
   margin-bottom: 0;
   padding: 0;
   margin-top: 0;
   text-align: center;
+}
+.menu-list a {
+  text-decoration: none;
+  color: black;
+}
+.main {
+  background-color: #555555;
+  height: 1000px;
+  padding: 0.1px;
+}
+.catalog_block1 {
+  width: 250px;
+  height: 600px;
+  margin-left: 29.9px;
+  float: left;
+}
+.catalog_block1 ul {
+  padding-inline-start: 0px;
+  margin: 0;
+}
+.catalog_block2 {
+  min-width: 850px;
+  height: 350px;
+  outline: 1px solid black;
+  margin-right: 29.9px;
+  float: right;
+}
+.catalog-list a {
+  text-decoration: none;
+  color: black;
+  padding-left: 30px;
+}
+.catalog-list {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 20px 0 20px 0;
+  border: 1px solid black;
+  margin-bottom: 2px;
+}
+.catalog_h1 a h1 {
+  color: black;
+  margin: 0;
+}
+.catalog_h1 a {
+  text-decoration: none;
+}
+.catalog_h1 {
+  margin: 30px 0 0 30px;
+  display: block;
+  padding-left: 30px;
+}
+.footer {
+  background-color: #333333;
+  height: 200px;
+  padding: 0.1px;
+}
+.clr {
+  clear: both;
 }

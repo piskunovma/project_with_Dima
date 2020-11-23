@@ -23,26 +23,93 @@ body {
     .margin;
 }
 
+.logo {
+    margin: 70px 0px 0px 70px;
+    width: 170px;
+    height: 170px;
+    background-image: url(../img/logo.jpg);
+    outline: 1px solid black;
+}
+
+.menu {
+    margin: 0 auto;
+}
+
+.menu-list li {
+    width: 100px;
+    height: 20px;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 18px;
+    box-shadow: 0 1px 5px black;
+    padding: 10px;
+}
+
+.menu-list {
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: black;
+}
+
 .main {
     background-color: @colorAll - #444;
     height: 1000px;
     padding: @paddingForMargin;
 }
 
-.block1 {
+.catalog_block1 {
     width: 250px;
     height: 600px;
-    outline: 1px solid black;
-    margin: 50px - @paddingForMargin 30px - @paddingForMargin;
+    // outline: 1px solid black;
+    margin-left: 30px - @paddingForMargin;
     float: left;
 }
 
-.block2 {
-    min-width: 820px;
-    height: 500px;
+.catalog_block1 ul {
+    padding-inline-start: 0px;
+    margin: 0;
+}
+
+.catalog_block2 {
+    min-width: 850px;
+    height: 350px;
     outline: 1px solid black;
-    margin: 50px - @paddingForMargin 30px - @paddingForMargin;
+    margin-right: 30 - @paddingForMargin;
     float: right;
+}
+
+.catalog-list a {
+    text-decoration: none;
+    color: black;
+    padding-left: 30px;
+}
+
+.catalog-list {
+    list-style-type: none;
+    font-size: 18px;
+    padding: 20px 0 20px 0;
+    border: 1px solid black;
+    margin-bottom: 2px;
+}
+
+.catalog_h1 a h1 {
+    color: black;
+    margin: 0;
+}
+.catalog_h1 a {
+    text-decoration: none;
+}
+
+.catalog_h1 {
+    margin: 30px 0 0 30px;
+    display: block;
+    padding-left: 30px;
 }
 
 .footer {
@@ -54,41 +121,3 @@ body {
 .clr {
     clear: both;
 }
-.logo {
-    margin: 70px 0px 0px 70px;
-    width: 170px;
-    height: 170px;
-    background-image: url(../img/logo.jpg);
-    outline: 1px solid black;
-}
-
-.menu {
-    height: 50px;
-    width: 650px;
-    margin: 0 auto;
-}
-
-.menu-list li {
-    width: 90px;
-    height: 20px;
-    list-style-type: none;
-    display: inline-block;
-    font-size: 18px;
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.menu-list {
-    margin-bottom: 0;
-    padding: 0;
-    margin-top: 0;
-    text-align: center;
-
-}
-// .test {
-//     // display: inline-block;
-// }
-
-// Разобраться почему margin толкается от верхнего блока
-// Разобраться почему не работает центрирование элементов списка
