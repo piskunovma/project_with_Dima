@@ -55,7 +55,7 @@ body {
 }
 .catalog_block1 {
   width: 250px;
-  height: 600px;
+  height: 400px;
   outline: 1px solid transparent;
   margin-left: 29.9px;
   float: left;
@@ -70,6 +70,31 @@ body {
   outline: 1px solid black;
   margin-right: 29.9px;
   margin-left: 310px;
+}
+.catalog_block3 {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+.index_product {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+}
+.index_text {
+  display: none;
+  height: 190px;
+  width: 190px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.catalog_block3 a:hover .index_text {
+  display: block;
 }
 .catalog-list a {
   text-decoration: none;

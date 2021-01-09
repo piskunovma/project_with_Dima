@@ -1,10 +1,6 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 
-{% block title %}
-Главная
-{% endblock title %}
-
 {% block content %}
 <div class="main">
     <span class="catalog_h1"><a href="/catalog/">
@@ -21,6 +17,20 @@
         </ul>
     </div>
     <div class="catalog_block2"></div>
+    <div class="catalog_block3">
+        {% for product in products %}
+        <div class="index_product">
+            <a href="{{ product.image_href }}"><img src="{% static 'img/' %}{{ product.image_src }}"
+                    alt="{{ product.alt }}">
+                <div class="index_text">
+                    <img src="{% static 'img/icon-hover.png' %}" alt="{{ product.alt }}">
+                    <h4>{{ product.name }}</h4>
+                    <p>{{ product.desc }} </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
     <div class="clr"></div>
 </div>
 {% endblock %}
