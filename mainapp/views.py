@@ -43,4 +43,6 @@ def main(request):
     return render(request, "mainapp/index.html", content)
 
 def catalog(request):
-    return render(request, "mainapp/catalog.html")
+    title = 'Каталог'
+    content = {"title": title}
+    return render(request, "mainapp/catalog.html", content)
