@@ -1,44 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'mainapp/base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/style/style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo"></div>
-            <div class="menu">
-                <ul class="menu-list">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/products/">Продукты</a></li>
-                    <!-- <li><a href="pages/contacts.html">Контакты</a></li>
-                    <li class="but_reg"><a href="#">Регистрация</a></li>
-                    <li class="but_sign"><a href="#">Вход</a></li> -->
-                </ul>
-            </div>
-        </div>
-        <div class="main">
-            <span class="catalog_h1"><a href="pages/catalog.html"><h1>Каталог</h1></a></span>
-            <div class="catalog_block1">
-                <ul>
-                    <li class="catalog-list"><a href="#">Диагностика</a></li>
-                    <li class="catalog-list"><a href="#">Замена масла</a></li>
-                    <li class="catalog-list"><a href="#">Ремонт двигателя</a></li>
-                    <li class="catalog-list"><a href="#">Ремонт подвески</a></li>
-                    <li class="catalog-list"><a href="#">Ремонт КПП</a></li>
-                    <li class="catalog-list"><a href="#">Услуги шиномонтажа</a></li>
-                </ul>
-            </div>
-            <div class="catalog_block2"></div>
-            <div class="clr"></div>
-        </div>
-        <div class="footer"></div>
+{% block content %}
+<div class="main">
+    <span class="index_h1"><a href="/catalog/">
+            <h1>Каталог</h1>
+        </a></span>
+    <div class="index_block1">
+        <ul>
+            <li class="index-list"><a href="#">Диагностика</a></li>
+            <li class="index-list"><a href="#">Замена масла</a></li>
+            <li class="index-list"><a href="#">Ремонт двигателя</a></li>
+            <li class="index-list"><a href="#">Ремонт подвески</a></li>
+            <li class="index-list"><a href="#">Ремонт КПП</a></li>
+            <li class="index-list"><a href="#">Услуги шиномонтажа</a></li>
+        </ul>
     </div>
-
-</body>
-
-</html>
+    <div class="index_block2"></div>
+    <div class="index_block3">
+        {% for product in products %}
+        <div class="index_product">
+            <a href="{{ product.image_href }}"><img src="{% static 'img/' %}{{ product.image_src }}"
+                    alt="{{ product.alt }}">
+                <div class="index_text">
+                    <img src="{% static 'img/icon-hover.png' %}" alt="{{ product.alt }}">
+                    <h4>{{ product.name }}</h4>
+                    <p>{{ product.desc }} </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="clr"></div>
+</div>
+{% endblock %}

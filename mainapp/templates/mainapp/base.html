@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+        {{ title|capfirst }}
+        {% endblock title %}
+    </title>
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style_catalog.css' %}">
+    {% endblock css %}
+
+    {% block js %}
+    {% endblock js %}
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"></div>
+            {% block menu %}
+            {% include 'mainapp/includes/inc_menu.html' %}
+            {% endblock menu %}
+        </div>
+
+
+
+        <div class="main">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        {% block footer %}
+        <div class="footer">
+            <div class="clearfix">
+                <div class="text-footer">
+                    <h3>контакты</h3>
+                </div>
+                <div class="text-footer">
+                    <h3>полезная информация</h3>
+                </div>
+            </div>
+            <p class="small small1">&copy; GB 2017</p>
+            <p class="small small2">Положения &amp; Условия / Конфиденциальность &amp; Cookies</p>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+
+</html>

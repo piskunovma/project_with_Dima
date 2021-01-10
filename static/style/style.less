@@ -60,6 +60,10 @@ body {
     text-align: center;
 }
 
+.menu_active {
+    font-size: 20px;
+}
+
 .menu-list a {
     text-decoration: none;
     color: black;
@@ -72,20 +76,20 @@ body {
     padding: @paddingForMargin;
 }
 
-.catalog_block1 {
+.index_block1 {
     width: 250px;
-    height: 600px;
+    height: 400px;
     outline: 1px solid transparent;
     margin-left: 30px - @paddingForMargin;
     float: left;
 }
 
-.catalog_block1 ul {
+.index_block1 ul {
     padding-inline-start: 0px;
     margin: 0;
 }
 
-.catalog_block2 {
+.index_block2 {
     width: 850px;
     height: 350px;
     outline: 1px solid black;
@@ -94,13 +98,46 @@ body {
     margin-left: 310px;
 }
 
-.catalog-list a {
+.index_block3 {
+    width: 1100px;
+	display: flex;
+	justify-content: space-between;
+    // background-color: white;
+    // outline: 1px solid black;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.index_product {
+    position: relative;
+    // background-color: grey;
+    // outline: 1px solid black;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto
+}
+
+.index_text {
+    display: none;
+    height: 190px;
+	width: 190px;
+	background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+
+.index_block3 a:hover .index_text{
+    display: block;
+}
+
+.index-list a {
     text-decoration: none;
     color: black;
     padding-left: 30px;
 }
 
-.catalog-list {
+.index-list {
     list-style-type: none;
     font-size: 18px;
     padding: 20px 0 20px 0;
@@ -108,16 +145,16 @@ body {
     margin-bottom: 2px;
 }
 
-.catalog_h1 a h1 {
+.index_h1 a h1 {
     color: black;
     margin: 0;
 }
-.catalog_h1 a {
+.index_h1 a {
     text-decoration: none;
     // display: block;
 }
 
-.catalog_h1 {
+.index_h1 {
     margin: 30px 0 0 30px;
     padding-left: 30px;
     display: block;
@@ -128,6 +165,18 @@ body {
     background-color: @colorAll - #666;
     height: 200px;
     padding: @paddingForMargin;
+}
+
+// .text-footer {
+//     display: inline-block;
+// }
+
+.small1 {
+    float: left;
+}
+
+.small2 {
+    float: right;
 }
 
 .clr {

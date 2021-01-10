@@ -5,6 +5,7 @@ import mainapp.views as mainapp
 
 urlpatterns =[
     path("admin/", admin.site.urls),
-    path("", mainapp.main),
-    path("products/", mainapp.products)
+    path("", mainapp.main, name="main"),
+    path("catalog/", mainapp.catalog, name="catalog"),
+    path("contacts/", mainapp.contacts, name="contacts"),
 ]
