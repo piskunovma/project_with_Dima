@@ -3,21 +3,21 @@
 
 {% block content %}
 <div class="main">
-    <span class="catalog_h1"><a href="/catalog/">
+    <span class="index_h1"><a href="/catalog/">
             <h1>Каталог</h1>
         </a></span>
-    <div class="catalog_block1">
+    <div class="index_block1">
         <ul>
-            <li class="catalog-list"><a href="#">Диагностика</a></li>
-            <li class="catalog-list"><a href="#">Замена масла</a></li>
-            <li class="catalog-list"><a href="#">Ремонт двигателя</a></li>
-            <li class="catalog-list"><a href="#">Ремонт подвески</a></li>
-            <li class="catalog-list"><a href="#">Ремонт КПП</a></li>
-            <li class="catalog-list"><a href="#">Услуги шиномонтажа</a></li>
+            <li class="index-list"><a href="#">Диагностика</a></li>
+            <li class="index-list"><a href="#">Замена масла</a></li>
+            <li class="index-list"><a href="#">Ремонт двигателя</a></li>
+            <li class="index-list"><a href="#">Ремонт подвески</a></li>
+            <li class="index-list"><a href="#">Ремонт КПП</a></li>
+            <li class="index-list"><a href="#">Услуги шиномонтажа</a></li>
         </ul>
     </div>
-    <div class="catalog_block2"></div>
-    <div class="catalog_block3">
+    <div class="index_block2"></div>
+    <div class="index_block3">
         {% for product in products %}
         <div class="index_product">
             <a href="{{ product.image_href }}"><img src="{% static 'img/' %}{{ product.image_src }}"
