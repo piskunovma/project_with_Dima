@@ -5,10 +5,10 @@
 <div class="catalog_block">
     {% for product in products %}
     <div class="catalog_content">
-        <a href="{{ product.image_href }}"><img src="{% static 'img/' %}{{ product.image_src }}"
-                alt="{{ product.alt }}">
-            <h4>{{ product.name }}</h4>
-            <p>{{ product.desc }} </p>
+        <a href="{% url 'catalog:cat' product.pk %}"><img src="{{ media_url }}{{ product.image }}"
+                alt="Нет картинки">
+            <h4>{{ product.service_name }}</h4>
+            <p>{{ product.description }} </p>
         </a>
     </div>
     {% endfor %}
