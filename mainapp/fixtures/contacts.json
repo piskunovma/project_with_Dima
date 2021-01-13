@@ -1,0 +1,12 @@
+[
+    {
+        "model": "mainapp.contact",
+        "pk": 1,
+        "fields": {
+            "phone": "+7-888-888-8888",
+            "email": "info@geekshop.ru",
+            "city": "Москва",
+            "address": "В пределах МКАД"
+        }
+    }
+]
