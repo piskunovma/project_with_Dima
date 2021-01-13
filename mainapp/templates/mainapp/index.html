@@ -20,12 +20,13 @@
     <div class="index_block3">
         {% for product in products %}
         <div class="index_product">
-            <a href="{{ product.image_href }}"><img src="{% static 'img/' %}{{ product.image_src }}"
-                    alt="{{ product.alt }}">
+            <a href="#"><img src="{{ media_url }}{{ product.image }}"
+                    alt="Ничего не сделали">
                 <div class="index_text">
-                    <img src="{% static 'img/icon-hover.png' %}" alt="{{ product.alt }}">
-                    <h4>{{ product.name }}</h4>
-                    <p>{{ product.desc }} </p>
+                    <img src="{% static 'img/icon-hover.png' %}" alt="Ничего не сделали2">
+                    <h3>{{ product.category_name }}</h3>
+                    <h4>{{ product.short_desc }}</h4>
+                    <p>{{ product.description }} </p>
                 </div>
             </a>
         </div>
