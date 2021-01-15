@@ -11,6 +11,7 @@ urlpatterns =[
     path("", mainapp.main, name="main"),
     path("catalog/", include("mainapp.urls", namespace="catalog")),
     path("contacts/", mainapp.contact, name="contacts"),
+    path("auth/", include("authnapp.urls", namespace="auth")),
 ]
 
 if settings.DEBUG:
