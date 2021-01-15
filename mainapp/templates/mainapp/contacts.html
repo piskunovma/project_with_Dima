@@ -3,32 +3,33 @@
 
 
 {% block menu %}
-<div class="hero">
-    <div class="header clearfix">
+<div>
+    <div class="clearfix">
         {% include 'mainapp/includes/inc_menu.html' %}
     </div>
-    <h1>наши контакты</h1>
-    <p>сегодня: {{ visit_date|date:"l, j F, Y" }}</p>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="location">
     {% for location in locations %}
-    <div class="location-1">
-        <i class="fa fa-map-marker fa-5x"></i>
-        <h4>{{ location.city }}</h4>
+    <div class="title_contacts">
+        <h1>Наши контакты</h1>
+    </div>
+    <p class="today">Сегодня: {{ visit_date|date:"l, j F, Y" }}</p>
+    <div class="location_1">
         <div class="contacts">
-            <h5>Телефон</h5>
-            <p>{{ location.phone }}</p>
+            <!-- <i class="fa fa-map-marker fa-5x"></i> -->
+            <p>Город: {{ location.city }}</p>
         </div>
         <div class="contacts">
-            <h5>Email</h5>
-            <p>{{ location.email }}</p>
+            <p>Телефон: {{ location.phone }}</p>
         </div>
         <div class="contacts">
-            <h5>Адрес</h5>
-            <p>{{ location.address }}</p>
+            <p>Email: {{ location.email }}</p>
+        </div>
+        <div class="contacts">
+            <p>Адрес: {{ location.address }}</p>
         </div>
     </div>
     {% endfor %}
