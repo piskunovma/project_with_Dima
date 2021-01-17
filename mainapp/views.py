@@ -2,7 +2,7 @@ from django.conf import settings
 from django.shortcuts import render
 from django.utils import timezone
 
-from .models import Catalog, Category
+from .models import Catalog, Category, Contact
 
 def main(request):
     title = 'Главная'
@@ -20,11 +20,9 @@ def catalog(request, pk=None):
         print(f"User select category: {pk}")
     return render(request, "mainapp/catalog.html", content)
 
-def contacts(request):
-    title = "контакты"
+def contact(request):
+    title = "о нас"
     visit_date = timezone.now()
-    locations = [
-        {"city": "Москва", "phone": "+7-888-888-8888", "email": "info@geekshop.ru", "address": "В пределах МКАД"},
-    ]
+    locations = Contact.objects.all()
     content = {"title": title, "visit_date": visit_date, "locations": locations}
     return render(request, "mainapp/contacts.html", content)

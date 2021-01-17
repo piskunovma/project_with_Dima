@@ -55,3 +55,12 @@ class Category(models.Model):
     image = models.ImageField(upload_to="category_images", verbose_name="Картинка услуги", blank=True)
     short_desc = models.CharField(verbose_name="Краткое описание услуги", max_length=60, blank=True)
     description = models.TextField(verbose_name="Описание услуги", blank=True)
+
+class Contact(models.Model):
+    phone = models.CharField(max_length=50, verbose_name="номер телефона")
+    email = models.EmailField(max_length=254, verbose_name="электронная почта")
+    city = models.CharField(max_length=128, default="Москва", verbose_name="город")
+    address = models.CharField(max_length=254, verbose_name="адрес")
+
+    def __str__(self):
+        return f"{self.pk} {self.email}"
