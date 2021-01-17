@@ -26,3 +26,9 @@ def contact(request):
     locations = Contact.objects.all()
     content = {"title": title, "visit_date": visit_date, "locations": locations}
     return render(request, "mainapp/contacts.html", content)
+
+def basecat(request, pk=None):
+    title = Catalog.objects.all()[pk-1].service_name
+    products = Catalog.objects.all()
+    content = {"title":title, "products": products}
+    return render(request, "mainapp/base_cat.html", content)
