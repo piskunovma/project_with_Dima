@@ -12,6 +12,9 @@ urlpatterns =[
     path("catalog/", include("mainapp.urls", namespace="catalog")),
     path("contacts/", mainapp.contact, name="contacts"),
     path("auth/", include("authnapp.urls", namespace="auth")),
+    path("carmarks/", mainapp.carmarks, name="carmarks"),
+    path("carmodels/", mainapp.carmodels, name="carmodels"),
+    path("baseinfo/", mainapp.baseinfo, name="baseinfo"),
 ]
 
 if settings.DEBUG:

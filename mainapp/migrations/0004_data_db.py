@@ -16,7 +16,7 @@ def forwards_func(apps, schema_editor):
     car_marks_obj = car_marks_model.objects.create(
         pk=1,
         name='Audi',
-        # image=''
+        image='carmarks_images/audi.png'
     )
 
     del car_marks_obj
@@ -24,7 +24,7 @@ def forwards_func(apps, schema_editor):
     car_marks_obj = car_marks_model.objects.create(
         pk=2,
         name='Volkswagen',
-        # image=''
+        image='carmarks_images/volkswagen.jpg'
     )
 
     del car_marks_obj
@@ -32,7 +32,7 @@ def forwards_func(apps, schema_editor):
     car_marks_obj = car_marks_model.objects.create(
         pk=3,
         name='Skoda',
-        # image=''
+        image='carmarks_images/skoda.jpg',
     )
 
     del car_marks_obj
@@ -40,10 +40,42 @@ def forwards_func(apps, schema_editor):
     car_marks_obj = car_marks_model.objects.create(
         pk=4,
         name='Seat',
-        # image=''
+        image='carmarks_images/seat.png',
     )
 
     del car_marks_obj
+
+    car_models_obj = car_models_model.objects.create(
+        pk=1,
+        name='Golf',
+        image='carmodels_images/golf.jpg',
+    )
+
+    del car_models_obj
+    
+    car_models_obj = car_models_model.objects.create(
+        pk=2,
+        name='Tiguan',
+        image='carmodels_images/tiguan.png',
+    )
+
+    del car_models_obj
+    
+    car_models_obj = car_models_model.objects.create(
+        pk=3,
+        name='Audi_a3',
+        image='carmodels_images/audi_a3.jpg',
+    )
+
+    del car_models_obj
+
+    car_models_obj = car_models_model.objects.create(
+        pk=4,
+        name='Audi_a8',
+        image='carmodels_images/audi_a8.jpg',
+    )
+
+    del car_models_obj
 
     car_catalog_model.objects.create(
         pk=1,

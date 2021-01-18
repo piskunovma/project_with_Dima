@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="catalog_block">
+    {% for model in models %}
+    <div class="catalog_content">
+        <a href="{% url 'carmodels' %}"><img src="{{ media_url }}{{ model.image }}" 
+            alt="Нет картинки">
+            <h4>{{ model.name }}</h4>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
