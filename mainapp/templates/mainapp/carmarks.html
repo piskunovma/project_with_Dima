@@ -2,14 +2,18 @@
 {% load static %}
 
 {% block content %}
+
 <div class="catalog_block">
     {% for mark in marks %}
     <div class="catalog_content">
-        <a href="{% url 'carmarks' %}"><img src="{{ media_url }}{{ mark.image }}" 
+        <h1>{{ product.pk }}</h1>
+        <a href="{% url 'catalog:models' %}"><img src="{{ media_url }}{{ mark.image }}" 
             alt="Нет картинки">
             <h4>{{ mark.name }}</h4>
+            <h1>{{ category }}</h1>
         </a>
     </div>
     {% endfor %}
+    {{ test }}
 </div>
 {% endblock content %}
