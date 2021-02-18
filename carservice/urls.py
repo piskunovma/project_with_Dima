@@ -11,9 +11,10 @@ urlpatterns =[
     path("admin/", admin.site.urls),
     path("", mainapp.main, name="main"),
     path("catalog/", include("mainapp.urls", namespace="catalog")),
+
+    # path("<str:pk>/", include("mainapp.urls", namespace="category")),
+
     path("contacts/", mainapp.contact, name="contacts"),
-    # path("carmarks/", mainapp.carmarks, name="carmarks"),
-    # path("carmodels/", mainapp.carmodels, name="carmodels"),
 
     path("auth/", include("authnapp.urls", namespace="auth")),
 ]

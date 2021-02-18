@@ -8,7 +8,6 @@ from .models import Catalog, Category, Contact, CarMarks, CarModels
 def main(request):
     title = 'Главная'
     products = Category.objects.all()
-
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
     return render(request, "mainapp/index.html", content)
 
@@ -16,8 +15,6 @@ def catalog(request, pk=None):
     title = 'Каталог'
     products = Catalog.objects.all()
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
-    # if pk:
-    #     print(f"User select category: {pk}")
     return render(request, "mainapp/catalog.html", content)
 
 def carmarks(request, pk=None):
