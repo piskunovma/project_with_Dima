@@ -7,7 +7,7 @@
     {% for mark in marks %}
     <div class="catalog_content">
         <h1>{{ product.pk }}</h1>
-        <a href="{% url 'catalog:models' %}"><img src="{{ media_url }}{{ mark.image }}" 
+        <a href="{% url 'catalog:models' product_pk=product_pk mark_pk=mark.pk %}"><img src="{{ media_url }}{{ mark.image }}" 
             alt="Нет картинки">
             <h4>{{ mark.name }}</h4>
             <h1>{{ category }}</h1>

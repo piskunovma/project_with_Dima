@@ -11,29 +11,29 @@ def main(request):
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
     return render(request, "mainapp/index.html", content)
 
-def catalog(request, pk=None):
+def catalog(request):
     title = 'Каталог'
     products = Catalog.objects.all()
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
     return render(request, "mainapp/catalog.html", content)
 
-def carmarks(request, pk=None):
+def carmarks(request, product_pk):
     title = "Марки машин"
     marks = CarMarks.objects.all()
-    content = {"title":title, "marks":marks, "media_url": settings.MEDIA_URL}
+    content = {"title":title, "marks":marks, "media_url": settings.MEDIA_URL, "product_pk":product_pk}
     return render(request, "mainapp/carmarks.html", content)
 
-def carmodels(request, pk=None):
+def carmodels(request, product_pk, mark_pk):
     title = "Модели машин"
     models = CarModels.objects.all()
-    content = {"title":title, "models":models, "media_url": settings.MEDIA_URL}
+    content = {"title":title, "models":models, "media_url": settings.MEDIA_URL, "product_pk":product_pk, "mark_pk":mark_pk}
     return render(request, "mainapp/carmodels.html", content)
 
-def basecat(request, pk=None):
-    title = "Итоговоый каталог"
+def basecat(request, product_pk, mark_pk, model_pk):
+    title = "Итоговый каталог"
     """[pk-1].service_name"""
-    products = Catalog.objects.all()
-    content = {"title":title, "products": products}
+    product = Catalog.objects.all().filter(pk = product_pk)[0]
+    content = {"title":title, "product": product}
     return render(request, "mainapp/base_cat.html", content)
 
 
