@@ -24,7 +24,7 @@ def carmarks(request, product_pk):
 
 def carmodels(request, product_pk, mark_pk):
     title = "Модели машин"
-    models = CarModels.objects.all()
+    models = CarModels.objects.all().filter(car_mark = mark_pk)
     content = {"title":title, "models":models, "media_url": settings.MEDIA_URL, "product_pk":product_pk, "mark_pk":mark_pk}
     return render(request, "mainapp/carmodels.html", content)
 

@@ -8,7 +8,7 @@ class CarMarks(models.Model):
 class CarModels(models.Model):
     name = models.CharField(verbose_name="Модель авто", max_length=64, unique=True)
     image = models.ImageField(upload_to="carmodels_images", verbose_name="Картинка модели", blank=True)
-    # car_mark = models.ForeignKey(CarMarks, verbose_name="Марка авто", on_delete=models.CASCADE)
+    car_mark = models.ForeignKey(CarMarks, verbose_name="Марка авто", on_delete=models.CASCADE, default=None)
 
 
 class CarYear(models.Model):
