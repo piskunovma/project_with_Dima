@@ -2,7 +2,6 @@ from django.conf import settings
 from django.shortcuts import render
 from django.utils import timezone
 
-from variables import TEST
 from .models import Catalog, Category, Contact, CarMarks, CarModels
 
 def main(request):
@@ -31,9 +30,11 @@ def carmodels(request, product_pk, mark_pk):
 
 def basecat(request, product_pk, mark_pk, model_pk):
     title = "Итоговый каталог"
-    """[pk-1].service_name"""
+    # [pk-1].service_name
     product = Catalog.objects.all().filter(pk = product_pk)[0]
-    content = {"title":title, "product": product}
+    mark_name = CarMarks.objects.filter(pk = mark_pk)[0].name
+    model_name = CarModels.objects.filter(pk = model_pk)[0].name
+    content = {"title":title, "product": product, "mark_name": mark_name, "model_name": model_name}
     return render(request, "mainapp/base_cat.html", content)
 
 
