@@ -216,3 +216,10 @@ fabric.properties
 # Local History for Visual Studio Code
 .history/
 .vscode/settings.json
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/project_with_Dima.iml
+/.idea/vcs.xml
+/.vscode/
